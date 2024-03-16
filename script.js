@@ -1,4 +1,4 @@
-const userName = "Mustafa";
+const userName = "Francesca";
 const para = document.createElement("p");
 
 const phonebook = [
@@ -13,12 +13,22 @@ const phonebook = [
 ];
 
 // Add your code here
-phonebook.forEach((person) => {
+// phonebook.forEach((person) => {
+//   if (person.name === userName) {
+//     para.textContent = `User's name: ${person.name},
+//     user's number: ${person.number}`;
+//   }
+// });
+
+for (let person of phonebook) {
   if (person.name === userName) {
-    para.textContent = `User's name: ${person.name}, 
+    para.textContent = `User's name: ${person.name},
     user's number: ${person.number}`;
+    break;
+  } else {
+    para.textContent = "Invalid input";
   }
-});
+}
 
 // Don't edit the code below here!
 const section = document.querySelector("section");
